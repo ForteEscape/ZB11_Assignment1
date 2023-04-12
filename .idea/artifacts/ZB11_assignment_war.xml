@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ZB11_assignment:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ZB11_assignment</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="ZB11_assignment-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="ZB11_assignment:war exploded" />
+    </root>
+  </artifact>
+</component>
