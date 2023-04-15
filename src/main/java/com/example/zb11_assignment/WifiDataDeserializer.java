@@ -23,7 +23,7 @@ public class WifiDataDeserializer implements JsonDeserializer<Result> {
             JsonObject wifiData = jsonElement.getAsJsonObject();
 
             wifiDataList.add(
-                    new Wifi(
+                    new Wifi( // LAT -> LNT
                             wifiData.get("X_SWIFI_MGR_NO").getAsString(),
                             wifiData.get("X_SWIFI_WRDOFC").getAsString(),
                             wifiData.get("X_SWIFI_MAIN_NM").getAsString(),

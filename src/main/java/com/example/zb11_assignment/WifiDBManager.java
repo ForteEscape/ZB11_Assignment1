@@ -1,21 +1,9 @@
 package com.example.zb11_assignment;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.*;
 
 public class WifiDBManager extends DBManager{
-    private final String url;
-    private final String user;
-    private final String password;
-
-    WifiDBManager(String url, String user, String password){
-        this.url = url;
-        this.user = user;
-        this.password = password;
-    }
-
     public boolean init(){
         try{
             Class<?> dbDriver = Class.forName("org.mariadb.jdbc.Driver");
@@ -30,12 +18,10 @@ public class WifiDBManager extends DBManager{
         }
     }
 
-    public void insert(Wifi element){
-        Connection connection = null;
+    public void insert(Connection connection, Wifi element){
         PreparedStatement preparedStatement = null;
 
         try{
-            connection = DriverManager.getConnection(url, user, password);
             String sql = "insert into wifi_detail (" +
                     "X_SWIFI_MGR_NO," +
                     "X_SWIFI_WRDOFC," +
@@ -75,8 +61,8 @@ public class WifiDBManager extends DBManager{
 
             int affected = preparedStatement.executeUpdate();
 
-            if (affected > 0){
-                System.out.println("success");
+            if (affected == 0){
+                System.out.println("error occur");
             }
 
         } catch (SQLException e){
@@ -89,14 +75,69 @@ public class WifiDBManager extends DBManager{
             } catch (SQLException e) {
                 e.printStackTrace();
             }
+        }
+    }
 
+    public List<Wifi> read(Connection connection){
+        List<Wifi> wifiDataList = new ArrayList<>(20000);
+        Statement statement = null;
+
+        try{
+            String sql = "select * from wifi_detail";
+
+            statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+
+            while(resultSet.next()){
+                String manageNo = resultSet.getString("X_SWIFI_MGR_NO");
+                String manageArea = resultSet.getString("X_SWIFI_WRDOFC");
+                String wifiName = resultSet.getString("X_SWIFI_MAIN_NM");
+                String address = resultSet.getString("X_SWIFI_ADRES1");
+                String addressDetail = resultSet.getString("X_SWIFI_ADRES2");
+                String installedFloor = resultSet.getString("X_SWIFI_INSTL_FLOOR");
+                String installType = resultSet.getString("X_SWIFI_INSTL_TY");
+                String installOrg = resultSet.getString("X_SWIFI_INSTL_MBY");
+                String serviceSeparator = resultSet.getString("X_SWIFI_SVC_SE");
+                String networkType = resultSet.getString("X_SWIFI_CMCWR");
+                String installedYear = resultSet.getString("X_SWIFI_CNSTC_YEAR");
+                String inoutDoor = resultSet.getString("X_SWIFI_INOUT_DOOR");
+                String connectEnvironment = resultSet.getString("X_SWIFI_REMARS3");
+                double lat = resultSet.getDouble("LAT");
+                double lnt = resultSet.getDouble("LNT");
+                String workDateTime = resultSet.getString("WORK_DTTM");
+
+                wifiDataList.add(new Wifi(
+                        manageNo,
+                        manageArea,
+                        wifiName,
+                        address,
+                        addressDetail,
+                        installedFloor,
+                        installType,
+                        installOrg,
+                        serviceSeparator,
+                        networkType,
+                        installedYear,
+                        inoutDoor,
+                        connectEnvironment,
+                        lat,
+                        lnt,
+                        workDateTime
+                ));
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+            System.out.println("dosent't work");
+        } finally {
             try{
-                if (connection != null && !connection.isClosed()){
-                    connection.close();
+                if (statement != null && !statement.isClosed()){
+                    statement.close();
                 }
-            } catch (SQLException e) {
+            } catch (SQLException e){
                 e.printStackTrace();
             }
         }
+
+        return wifiDataList;
     }
 }

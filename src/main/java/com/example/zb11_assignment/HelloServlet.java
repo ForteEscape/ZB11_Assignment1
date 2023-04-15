@@ -7,36 +7,35 @@ import okhttp3.Response;
 import okhttp3.ResponseBody;
 
 import java.io.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
 @WebServlet(name = "helloServlet", value = "/hello-servlet")
 public class HelloServlet extends HttpServlet {
-    private String message;
-
     public void init() {
-        message = "Hello World!";
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
+        response.setContentType("text/html;charset=UTF-8");
 
         String connectUrl = "jdbc:mariadb://localhost:3306/zb11_assignment1";
         String user = "root";
         String password = "kk2924140";
 
-        WifiDBManager wifiDBManager = new WifiDBManager(connectUrl, user, password);
+        WifiDBManager wifiDBManager = new WifiDBManager();
         wifiDBManager.init();
 
         int idx = 0;
         int prevIdx = 1;
+        int totalCnt = 0;
 
-        for(int i = 1; i <= 10; i++){
+        for(int i = 1; i <= 24; i++){
             idx = i * 1000;
 
             String url = "http://openapi.seoul.go.kr:8088/61636356677365683439787a46536c/json/TbPublicWifiInfo/" + prevIdx + "/" + idx + "/";
-
-            prevIdx = idx + 1;
 
             OkHttpClient client = new OkHttpClient();
 
@@ -49,31 +48,48 @@ public class HelloServlet extends HttpServlet {
                 Gson gson = new Gson();
 
                 if (body != null){
-                    String data = "";
                     PublicWifiInfo publicWifiInfo;
                     try{
-                        data = body.string();
-                        publicWifiInfo = gson.fromJson(data, PublicWifiInfo.class);
+                        publicWifiInfo = gson.fromJson(body.string(), PublicWifiInfo.class);
                         Result result = gson.fromJson(publicWifiInfo.TbPublicWifiInfo.getAsJsonObject(), Result.class);
 
+                        Connection connection = DriverManager.getConnection(connectUrl, user, password);
+                        System.out.println("connection opened");
+
                         for (Wifi element : result.getWifiData()){
-                            wifiDBManager.insert(element);
+                            totalCnt++;
+                            wifiDBManager.insert(connection, element);
+                        }
+                        System.out.println(prevIdx + " to " + idx + " data inserted");
+
+                        try{
+                            if (connection != null && !connection.isClosed()){
+                                connection.close();
+                            }
+                            System.out.println("connection closed");
+                        } catch (SQLException e) {
+                            e.printStackTrace();
+                            break;
                         }
                     } catch (Exception e){
                         e.printStackTrace();
-                        //System.out.println(data);
                     }
                 }
             } else{
-                System.out.println("error");
                 System.err.println("error");
             }
+
+            prevIdx = idx + 1;
         }
 
         // Hello
         PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>" + message + "</h1>");
+        out.println("<html>");
+        out.println("<body>");
+        out.println("<h1 style=\"text-align: center\">" + totalCnt + "개의 WIFI 정보를 정상적으로 저장하였습니다.</h1>");
+        out.println("<div style=\"text-align: center\">");
+        out.println("<a href=http://localhost:8080/ZB11_assignment_war_exploded/> 홈으로 가기</a>");
+        out.println("</div>");
         out.println("</body></html>");
     }
 
