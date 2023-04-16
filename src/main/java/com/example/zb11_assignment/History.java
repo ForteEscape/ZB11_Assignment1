@@ -9,5 +9,5 @@ public class History {
     int uid;
     double lat;
     double lnt;
-    java.sql.Date date;
+    String date;
 }

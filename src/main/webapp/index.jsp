@@ -1,8 +1,6 @@
 <%@ page import="java.util.*" %>
 <%@ page import="java.sql.*" %>
-<%@ page import="com.example.zb11_assignment.Wifi" %>
-<%@ page import="com.example.zb11_assignment.WifiDBManager" %>
-<%@ page import="com.example.zb11_assignment.WifiTotalData" %>
+<%@ page import="com.example.zb11_assignment.*" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -76,8 +74,8 @@
 %>
 
 <h1><%= "와이파이 정보 구하기" %></h1>
-<a href="#">홈</a> |
-<a href="#">위치 히스토리 목록</a> |
+<a href="/ZB11_assignment_war_exploded/index.jsp">홈</a> |
+<a href="/ZB11_assignment_war_exploded/history.jsp">위치 히스토리 목록</a> |
 <a href="hello-servlet">Open API 와이파이 정보 가져오기</a>
 <br>
 <br>
@@ -90,8 +88,9 @@
 </form>
 
 <%
-    String lat = request.getParameter("LAT");;
-    String lnt = request.getParameter("LNT");;
+    String lat = request.getParameter("LAT");
+    String lnt = request.getParameter("LNT");
+    int uid = -1;
 %>
 <br>
 <table>
@@ -125,6 +124,8 @@
     <%} else {
         PriorityQueue<WifiTotalData> pq = new PriorityQueue<>();
         WifiDBManager wifiDBManager = new WifiDBManager();
+        HistoryDBManager historyDBManager = new HistoryDBManager();
+        historyDBManager.init();
         wifiDBManager.init();
         Connection connection = null;
 
@@ -136,10 +137,23 @@
             connection = DriverManager.getConnection(connectUrl, user, password);
             List<Wifi> wifiData = wifiDBManager.read(connection);
 
+            if (uid == -1){
+                uid = historyDBManager.getCurrentUid(connection);
+            }
+
             double lntData = Double.parseDouble(lnt);
             double latData = Double.parseDouble(lat);
 
+            System.out.println("uid : " + uid);
+            java.sql.Timestamp dateTime = java.sql.Timestamp.valueOf(java.time.LocalDateTime.now());
+            StringTokenizer st = new StringTokenizer(dateTime.toString());
+            String date = st.nextToken() + "T" + st.nextToken();
+
+            History history = new History(++uid, latData, lntData, date);
+            System.out.println(date);
             System.out.println(latData + " " + lntData);
+
+            historyDBManager.insert(connection, history);
 
             for(Wifi element: wifiData){
                 double distance = getDist(latData, lntData, element.getLat(), element.getLnt());

@@ -127,7 +127,6 @@ public class WifiDBManager extends DBManager{
             }
         } catch (SQLException e){
             e.printStackTrace();
-            System.out.println("dosent't work");
         } finally {
             try{
                 if (statement != null && !statement.isClosed()){
