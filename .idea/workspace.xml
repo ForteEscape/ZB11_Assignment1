@@ -9,14 +9,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d53d8ada-b056-420e-b94b-3ce93a4550c0" name="Changes" comment="add function&#10;- get 20 items of WIFI data order by distance&#10;- add new model of history table&#10;- enhance of sql connection and send query">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/history.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/historyDelete.jsp" afterDir="false" />
+    <list default="true" id="d53d8ada-b056-420e-b94b-3ce93a4550c0" name="Changes" comment="add history function&#10;- add CRUD function in history table">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/JDBCConnector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/history/controller/HistoryDeleteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/history/controller/HistoryShowController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/history/dao/HistoryDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/history/domain/HistoryVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/history/dto/HistoryDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/history/service/HistoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/wifi/controller/LocationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/wifi/controller/WifiDataController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/wifi/controller/WifiDetailController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/wifi/dao/WifiDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/wifi/domain/WifiVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/wifi/dto/WifiDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/wifi/service/WifiService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/wifi/getWifiData.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/wifi/wifiDetail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/zb11_assignment/history/dao/HistoryDAOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/zb11_assignment/wifi/dao/JDBCConnectorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/zb11_assignment/wifi/dao/WifiDAOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ZB11_assignment_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ZB11_assignment_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/DBManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/History.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/WifiDBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/WifiDBManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/historyDBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/HistoryDBManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/DBManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/History.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/HistoryDBManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/PublicWifiInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/wifi/externals/PublicWifiInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/wifi/externals/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/Wifi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/WifiDBManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/WifiDataDeserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/wifi/externals/WifiDataDeserializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/WifiTotalData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/wifi/externals/WifiTotalData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/history.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/history/history.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/historyDelete.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +56,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
         <option value="Jsp File" />
       </list>
@@ -52,33 +81,136 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;import_schema_mapping&quot;: &quot;&lt;schema-mapping&gt;\n  &lt;databases&gt;\n    &lt;list&gt;\n      &lt;schema-mapping-item&gt;\n        &lt;source-data-source-id&gt;7c1fc121-d253-46d7-bba0-c1b11c2f46fd&lt;/source-data-source-id&gt;\n        &lt;source-path&gt;schema/&amp;quot;zb11_assignment1&amp;quot;&lt;/source-path&gt;\n        &lt;target-data-source-id&gt;7c1fc121-d253-46d7-bba0-c1b11c2f46fd&lt;/target-data-source-id&gt;\n        &lt;target-path&gt;schema/&amp;quot;zb11_assignment1&amp;quot;&lt;/target-path&gt;\n      &lt;/schema-mapping-item&gt;\n    &lt;/list&gt;\n  &lt;/databases&gt;\n&lt;/schema-mapping&gt;&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "import_schema_mapping": "<schema-mapping>\n  <databases>\n    <list>\n      <schema-mapping-item>\n        <source-data-source-id>7c1fc121-d253-46d7-bba0-c1b11c2f46fd</source-data-source-id>\n        <source-path>schema/&quot;zb11_assignment1&quot;</source-path>\n        <target-data-source-id>7c1fc121-d253-46d7-bba0-c1b11c2f46fd</target-data-source-id>\n        <target-path>schema/&quot;zb11_assignment1&quot;</target-path>\n      </schema-mapping-item>\n    </list>\n  </databases>\n</schema-mapping>",
+    "last_opened_file_path": "C:/Users/sehunkim/Desktop/dev (2)/jspProject",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "vcs.Git"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mariadb&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
     ]
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.zb11_assignment.wifi.service" />
+      <recent name="com.example.zb11_assignment.wifi.domain" />
+      <recent name="com.example.zb11_assignment.wifi.dto" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sehunkim\Desktop\hello-spring\ZB11_assignment\src\main\webapp\history" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.zb11_assignment" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.zb11_assignment.history.dao" />
+      <recent name="com.example.zb11_assignment.wifi.dao" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.87">
+    <configuration name="HistoryDAOTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ZB11_assignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.zb11_assignment.history.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.zb11_assignment.history.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.example.zb11_assignment.history.dao.HistoryDAOTest" />
+      <option name="METHOD_NAME" value="delete" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HistoryDAOTest.insert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ZB11_assignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.zb11_assignment.history.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.zb11_assignment.history.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.example.zb11_assignment.history.dao.HistoryDAOTest" />
+      <option name="METHOD_NAME" value="insert" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HistoryDAOTest.selectAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ZB11_assignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.zb11_assignment.history.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.zb11_assignment.history.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.example.zb11_assignment.history.dao.HistoryDAOTest" />
+      <option name="METHOD_NAME" value="selectAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WifiDAOTest.selectAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ZB11_assignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.zb11_assignment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.zb11_assignment.wifi.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.example.zb11_assignment.wifi.dao.WifiDAOTest" />
+      <option name="METHOD_NAME" value="selectAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WifiDAOTest.selectOneByMGN" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ZB11_assignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.zb11_assignment.wifi.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.zb11_assignment.wifi.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.example.zb11_assignment.wifi.dao.WifiDAOTest" />
+      <option name="METHOD_NAME" value="selectOneByMGN" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 8.5.87" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.87" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
         <artifact name="ZB11_assignment:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/ZB11_assignment_war_exploded" />
+            <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
       </deployment>
@@ -90,6 +222,54 @@
       <predefined_log_file id="Tomcat Manager" />
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="54798" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -112,6 +292,15 @@
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.WifiDAOTest.selectOneByMGN" />
+        <item itemvalue="JUnit.HistoryDAOTest.delete" />
+        <item itemvalue="JUnit.HistoryDAOTest.selectAll" />
+        <item itemvalue="JUnit.HistoryDAOTest.insert" />
+        <item itemvalue="JUnit.WifiDAOTest.selectAll" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -129,7 +318,14 @@
       <workItem from="1681572276201" duration="9647000" />
       <workItem from="1681581966005" duration="205000" />
       <workItem from="1681614424446" duration="8000" />
-      <workItem from="1681635485187" duration="1142000" />
+      <workItem from="1681635485187" duration="1329000" />
+      <workItem from="1681639880320" duration="84000" />
+      <workItem from="1681644357189" duration="402000" />
+      <workItem from="1681649175800" duration="95000" />
+      <workItem from="1681903927177" duration="634000" />
+      <workItem from="1682082718128" duration="37000" />
+      <workItem from="1682231045479" duration="4794000" />
+      <workItem from="1682308396393" duration="25697000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <created>1681310618038</created>
@@ -152,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681570456409</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add history function&#10;- add CRUD function in history table">
+      <created>1681639512536</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681639512536</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +376,7 @@
     <MESSAGE value="init project" />
     <MESSAGE value="change WifiDBManger's member field none to final" />
     <MESSAGE value="add function&#10;- get 20 items of WIFI data order by distance&#10;- add new model of history table&#10;- enhance of sql connection and send query" />
-    <option name="LAST_COMMIT_MESSAGE" value="add function&#10;- get 20 items of WIFI data order by distance&#10;- add new model of history table&#10;- enhance of sql connection and send query" />
+    <MESSAGE value="add history function&#10;- add CRUD function in history table" />
+    <option name="LAST_COMMIT_MESSAGE" value="add history function&#10;- add CRUD function in history table" />
   </component>
 </project>

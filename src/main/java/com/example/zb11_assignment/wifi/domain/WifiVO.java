@@ -1,12 +1,13 @@
-package com.example.zb11_assignment;
+package com.example.zb11_assignment.wifi.domain;
 
-import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.ToString;
 
 @Getter
-@AllArgsConstructor
-
-public class Wifi {
+@Builder
+@ToString
+public class WifiVO {
     private String manageNo;
     private String manageArea;
     private String wifiName;

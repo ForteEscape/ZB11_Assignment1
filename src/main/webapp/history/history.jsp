@@ -1,9 +1,5 @@
-<%@ page import="com.example.zb11_assignment.HistoryDBManager" %>
-<%@ page import="java.sql.Connection" %>
-<%@ page import="java.sql.DriverManager" %>
-<%@ page import="java.sql.SQLException" %>
-<%@ page import="com.example.zb11_assignment.History" %>
 <%@ page import="java.util.*" %>
+<%@ page import="com.example.zb11_assignment.history.dto.HistoryDTO" %>
 <%--
   Created by IntelliJ IDEA.
   User: sehunkim
@@ -18,7 +14,7 @@
 
     <script>
         function del(idx){
-            location.href="historyDelete.jsp?idx=" + idx;
+            location.href="/history/delete?idx=" + idx;
         }
     </script>
 
@@ -51,30 +47,11 @@
 </head>
 <body>
     <h1>위치 히스토리 목록</h1>
-    <a href="/ZB11_assignment_war_exploded/index.jsp">홈</a> |
-    <a href="/ZB11_assignment_war_exploded/history.jsp">위치 히스토리 목록</a> |
-    <a href="hello-servlet">Open API 와이파이 정보 가져오기</a>
+    <a href="/index.jsp">홈</a> |
+    <a href="/history/show">위치 히스토리 목록</a> |
+    <a href="/wifi/getData">Open API 와이파이 정보 가져오기</a>
     <br>
     <br>
-
-    <%
-        HistoryDBManager historyDBManager = new HistoryDBManager();
-        historyDBManager.init();
-
-        Connection connection = null;
-        List<History> historyList = null;
-
-        String connectUrl = "jdbc:mariadb://localhost:3306/zb11_assignment1";
-        String user = "root";
-        String password = "kk2924140";
-
-        try{
-            connection = DriverManager.getConnection(connectUrl, user, password);
-            historyList = historyDBManager.read(connection);
-        } catch (SQLException e){
-            e.printStackTrace();
-        }
-    %>
 
     <table>
         <thead>
@@ -88,8 +65,9 @@
         </thead>
 
         <%
-            if(historyList != null){
-                for(History element: historyList){%>
+            List<HistoryDTO> result = (ArrayList<HistoryDTO>)request.getAttribute("result");
+            if(result != null){
+                for(HistoryDTO element: result){%>
                     <tr>
                         <td> <%= element.getUid() %></td>
                         <td> <%= element.getLat() %></td>
