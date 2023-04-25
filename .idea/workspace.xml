@@ -9,43 +9,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d53d8ada-b056-420e-b94b-3ce93a4550c0" name="Changes" comment="add history function&#10;- add CRUD function in history table">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/JDBCConnector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/history/controller/HistoryDeleteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/history/controller/HistoryShowController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/history/dao/HistoryDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/history/domain/HistoryVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/history/dto/HistoryDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/history/service/HistoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/wifi/controller/LocationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/wifi/controller/WifiDataController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/wifi/controller/WifiDetailController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/wifi/dao/WifiDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/wifi/domain/WifiVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/wifi/dto/WifiDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/wifi/service/WifiService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/wifi/getWifiData.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/wifi/wifiDetail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/zb11_assignment/history/dao/HistoryDAOTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/zb11_assignment/wifi/dao/JDBCConnectorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/zb11_assignment/wifi/dao/WifiDAOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ZB11_assignment_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ZB11_assignment_war_exploded.xml" afterDir="false" />
+    <list default="true" id="d53d8ada-b056-420e-b94b-3ce93a4550c0" name="Changes" comment="refactoring project&#10;- reimplement project with MVC model rule">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/dao/BookMarkDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/dao/BookMarkGroupDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/domain/BookMarkGroupVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/domain/BookMarkResultVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/dto/BookMarkDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/dto/BookMarkGroupDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/zb11_assignment/bookmark/dao/BookMarkDAOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/zb11_assignment/bookmark/dao/BookMarkGroupDAOTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/DBManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/HelloServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/History.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/HistoryDBManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/PublicWifiInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/wifi/externals/PublicWifiInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/wifi/externals/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/Wifi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/WifiDBManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/WifiDataDeserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/wifi/externals/WifiDataDeserializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/WifiTotalData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/wifi/externals/WifiTotalData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/history.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/history/history.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/historyDelete.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/history/history.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/history/history.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/wifi/wifiDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/wifi/wifiDetail.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,9 +33,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
-        <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="JavaFXApplication" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -81,32 +59,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "import_schema_mapping": "<schema-mapping>\n  <databases>\n    <list>\n      <schema-mapping-item>\n        <source-data-source-id>7c1fc121-d253-46d7-bba0-c1b11c2f46fd</source-data-source-id>\n        <source-path>schema/&quot;zb11_assignment1&quot;</source-path>\n        <target-data-source-id>7c1fc121-d253-46d7-bba0-c1b11c2f46fd</target-data-source-id>\n        <target-path>schema/&quot;zb11_assignment1&quot;</target-path>\n      </schema-mapping-item>\n    </list>\n  </databases>\n</schema-mapping>",
-    "last_opened_file_path": "C:/Users/sehunkim/Desktop/dev (2)/jspProject",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;import_schema_mapping&quot;: &quot;&lt;schema-mapping&gt;\n  &lt;databases&gt;\n    &lt;list&gt;\n      &lt;schema-mapping-item&gt;\n        &lt;source-data-source-id&gt;7c1fc121-d253-46d7-bba0-c1b11c2f46fd&lt;/source-data-source-id&gt;\n        &lt;source-path&gt;schema/&amp;quot;zb11_assignment1&amp;quot;&lt;/source-path&gt;\n        &lt;target-data-source-id&gt;7c1fc121-d253-46d7-bba0-c1b11c2f46fd&lt;/target-data-source-id&gt;\n        &lt;target-path&gt;schema/&amp;quot;zb11_assignment1&amp;quot;&lt;/target-path&gt;\n      &lt;/schema-mapping-item&gt;\n    &lt;/list&gt;\n  &lt;/databases&gt;\n&lt;/schema-mapping&gt;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sehunkim/Desktop/dev (2)/jspProject&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mariadb"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.zb11_assignment.bookmark.domain" />
+      <recent name="com.example.zb11_assignment.bookmark.dto" />
       <recent name="com.example.zb11_assignment.wifi.service" />
       <recent name="com.example.zb11_assignment.wifi.domain" />
       <recent name="com.example.zb11_assignment.wifi.dto" />
@@ -121,86 +100,87 @@
       <recent name="com.example.zb11_assignment" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.zb11_assignment.bookmark.dao" />
       <recent name="com.example.zb11_assignment.history.dao" />
       <recent name="com.example.zb11_assignment.wifi.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.87">
-    <configuration name="HistoryDAOTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.BookMarkGroupDAOTest.delete">
+    <configuration name="BookMarkDAOTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ZB11_assignment" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.zb11_assignment.history.dao.*" />
+          <option name="PATTERN" value="com.example.zb11_assignment.bookmark.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.zb11_assignment.history.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.example.zb11_assignment.history.dao.HistoryDAOTest" />
+      <option name="PACKAGE_NAME" value="com.example.zb11_assignment.bookmark.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.example.zb11_assignment.bookmark.dao.BookMarkDAOTest" />
       <option name="METHOD_NAME" value="delete" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HistoryDAOTest.insert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BookMarkDAOTest.insert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ZB11_assignment" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.zb11_assignment.history.dao.*" />
+          <option name="PATTERN" value="com.example.zb11_assignment.bookmark.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.zb11_assignment.history.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.example.zb11_assignment.history.dao.HistoryDAOTest" />
+      <option name="PACKAGE_NAME" value="com.example.zb11_assignment.bookmark.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.example.zb11_assignment.bookmark.dao.BookMarkDAOTest" />
       <option name="METHOD_NAME" value="insert" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HistoryDAOTest.selectAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BookMarkDAOTest.selectAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ZB11_assignment" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.zb11_assignment.history.dao.*" />
+          <option name="PATTERN" value="com.example.zb11_assignment.bookmark.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.zb11_assignment.history.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.example.zb11_assignment.history.dao.HistoryDAOTest" />
+      <option name="PACKAGE_NAME" value="com.example.zb11_assignment.bookmark.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.example.zb11_assignment.bookmark.dao.BookMarkDAOTest" />
       <option name="METHOD_NAME" value="selectAll" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WifiDAOTest.selectAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BookMarkGroupDAOTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ZB11_assignment" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.zb11_assignment.*" />
+          <option name="PATTERN" value="com.example.zb11_assignment.bookmark.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.zb11_assignment.wifi.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.example.zb11_assignment.wifi.dao.WifiDAOTest" />
-      <option name="METHOD_NAME" value="selectAll" />
+      <option name="PACKAGE_NAME" value="com.example.zb11_assignment.bookmark.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.example.zb11_assignment.bookmark.dao.BookMarkGroupDAOTest" />
+      <option name="METHOD_NAME" value="delete" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WifiDAOTest.selectOneByMGN" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BookMarkGroupDAOTest.selectAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ZB11_assignment" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.zb11_assignment.wifi.dao.*" />
+          <option name="PATTERN" value="com.example.zb11_assignment.bookmark.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.zb11_assignment.wifi.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.example.zb11_assignment.wifi.dao.WifiDAOTest" />
-      <option name="METHOD_NAME" value="selectOneByMGN" />
+      <option name="PACKAGE_NAME" value="com.example.zb11_assignment.bookmark.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.example.zb11_assignment.bookmark.dao.BookMarkGroupDAOTest" />
+      <option name="METHOD_NAME" value="selectAll" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -294,11 +274,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WifiDAOTest.selectOneByMGN" />
-        <item itemvalue="JUnit.HistoryDAOTest.delete" />
-        <item itemvalue="JUnit.HistoryDAOTest.selectAll" />
-        <item itemvalue="JUnit.HistoryDAOTest.insert" />
-        <item itemvalue="JUnit.WifiDAOTest.selectAll" />
+        <item itemvalue="JUnit.BookMarkGroupDAOTest.delete" />
+        <item itemvalue="JUnit.BookMarkDAOTest.selectAll" />
+        <item itemvalue="JUnit.BookMarkDAOTest.delete" />
+        <item itemvalue="JUnit.BookMarkDAOTest.insert" />
+        <item itemvalue="JUnit.BookMarkGroupDAOTest.selectAll" />
       </list>
     </recent_temporary>
   </component>
@@ -325,7 +305,8 @@
       <workItem from="1681903927177" duration="634000" />
       <workItem from="1682082718128" duration="37000" />
       <workItem from="1682231045479" duration="4794000" />
-      <workItem from="1682308396393" duration="25697000" />
+      <workItem from="1682308396393" duration="25929000" />
+      <workItem from="1682398171176" duration="19054000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <created>1681310618038</created>
@@ -355,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681639512536</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="refactoring project&#10;- reimplement project with MVC model rule">
+      <created>1682337408183</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1682337408183</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,6 +365,7 @@
     <MESSAGE value="change WifiDBManger's member field none to final" />
     <MESSAGE value="add function&#10;- get 20 items of WIFI data order by distance&#10;- add new model of history table&#10;- enhance of sql connection and send query" />
     <MESSAGE value="add history function&#10;- add CRUD function in history table" />
-    <option name="LAST_COMMIT_MESSAGE" value="add history function&#10;- add CRUD function in history table" />
+    <MESSAGE value="refactoring project&#10;- reimplement project with MVC model rule" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring project&#10;- reimplement project with MVC model rule" />
   </component>
 </project>
