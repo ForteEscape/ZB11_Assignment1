@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public enum BookMarkDAO {
+public enum BookMarkItemDAO {
     INSTANCE;
 
     public int insert(BookMarkDTO bookMarkDTO){
@@ -20,12 +20,11 @@ public enum BookMarkDAO {
         PreparedStatement preparedStatement = null;
 
         try{
-            String sql = "insert into bookmark_detail (BOOKMARK_GROUP_ID, WIFI_NAME, REGIST_DATE, MANAGE_NO) values (?, ?, ?, ?)";
+            String sql = "insert into bookmark_detail (BOOKMARK_GROUP_ID, WIFI_NAME, REGIST_DATE) values (?, ?, ?)";
             preparedStatement = conn.prepareStatement(sql);
             preparedStatement.setInt(1, bookMarkDTO.getBookmarkGroupId());
             preparedStatement.setString(2, bookMarkDTO.getWifiName());
             preparedStatement.setString(3, bookMarkDTO.getRegistrationDate());
-            preparedStatement.setString(4, bookMarkDTO.getManageNumber());
 
             result = preparedStatement.executeUpdate();
         } catch (SQLException e) {
@@ -85,6 +84,41 @@ public enum BookMarkDAO {
                 result.add(bookMarkResultVO);
             }
 
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            JDBCConnector.close(conn);
+            JDBCConnector.close(preparedStatement);
+            JDBCConnector.close(rs);
+        }
+
+        return result;
+    }
+
+    public BookMarkResultVO selectOne(int id){
+        BookMarkResultVO result = null;
+
+        Connection conn = JDBCConnector.getConnection();
+        PreparedStatement preparedStatement = null;
+        ResultSet rs = null;
+
+        try{
+            String sql = "select B.ID, BG.BOOKMARK_NAME, B.WIFI_NAME, B.REGIST_DATE from bookmark_detail B " +
+                    "inner join bookmark_group BG on B.BOOKMARK_GROUP_ID = BG.BOOKMARK_GROUP_ID where B.ID=?";
+
+            preparedStatement = conn.prepareStatement(sql);
+            preparedStatement.setInt(1, id);
+
+            rs = preparedStatement.executeQuery();
+
+            while(rs.next()){
+                result = BookMarkResultVO.builder()
+                        .ID(rs.getInt("ID"))
+                        .bookmarkName(rs.getString("BOOKMARK_NAME"))
+                        .wifiName(rs.getString("WIFI_NAME"))
+                        .registrationDate(rs.getString("REGIST_DATE"))
+                        .build();
+            }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         } finally {

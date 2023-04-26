@@ -9,20 +9,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d53d8ada-b056-420e-b94b-3ce93a4550c0" name="Changes" comment="refactoring project&#10;- reimplement project with MVC model rule">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/dao/BookMarkDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/dao/BookMarkGroupDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/domain/BookMarkGroupVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/domain/BookMarkResultVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/dto/BookMarkDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/dto/BookMarkGroupDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/zb11_assignment/bookmark/dao/BookMarkDAOTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/zb11_assignment/bookmark/dao/BookMarkGroupDAOTest.java" afterDir="false" />
+    <list default="true" id="d53d8ada-b056-420e-b94b-3ce93a4550c0" name="Changes" comment="add bookmark dao, dto, vo">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/controller/group/BookMarkGroupAddController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/controller/group/BookMarkGroupDeleteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/controller/group/BookMarkGroupModifyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/controller/group/BookMarkGroupPrepareDeleteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/controller/group/BookMarkGroupPrepareModifyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/controller/group/BookMarkGroupShowController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/controller/items/BookMarkItemAddController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/controller/items/BookMarkItemDeleteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/controller/items/BookMarkItemPrepareDeleteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/controller/items/BookMarkItemShowController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/dto/BookMarkResultDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/service/BookMarkGroupService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/service/BookMarkItemService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bookmark/group/add-group.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bookmark/group/delete-prepare.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bookmark/group/group-show.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bookmark/group/modify-prepare.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bookmark/items/delete-prepare.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bookmark/items/show-items.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/dao/BookMarkDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/dao/BookMarkItemDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/dao/BookMarkGroupDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/dao/BookMarkGroupDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/domain/BookMarkResultVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/domain/BookMarkResultVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/dto/BookMarkDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/dto/BookMarkDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/wifi/controller/WifiDetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/wifi/controller/WifiDetailController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/history/history.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/history/history.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/wifi/wifiDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/wifi/wifiDetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/zb11_assignment/bookmark/dao/BookMarkDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/zb11_assignment/bookmark/dao/BookMarkItemDAOTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,10 +50,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
-        <option value="Jsp File" />
         <option value="JavaFXApplication" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -94,6 +111,7 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sehunkim\Desktop\hello-spring\ZB11_assignment\src\main\webapp\bookmark\items" />
       <recent name="C:\Users\sehunkim\Desktop\hello-spring\ZB11_assignment\src\main\webapp\history" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -105,55 +123,7 @@
       <recent name="com.example.zb11_assignment.wifi.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BookMarkGroupDAOTest.delete">
-    <configuration name="BookMarkDAOTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ZB11_assignment" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.zb11_assignment.bookmark.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.zb11_assignment.bookmark.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.example.zb11_assignment.bookmark.dao.BookMarkDAOTest" />
-      <option name="METHOD_NAME" value="delete" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BookMarkDAOTest.insert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ZB11_assignment" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.zb11_assignment.bookmark.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.zb11_assignment.bookmark.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.example.zb11_assignment.bookmark.dao.BookMarkDAOTest" />
-      <option name="METHOD_NAME" value="insert" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BookMarkDAOTest.selectAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ZB11_assignment" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.zb11_assignment.bookmark.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.zb11_assignment.bookmark.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.example.zb11_assignment.bookmark.dao.BookMarkDAOTest" />
-      <option name="METHOD_NAME" value="selectAll" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.87">
     <configuration name="BookMarkGroupDAOTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ZB11_assignment" />
       <extension name="coverage">
@@ -180,6 +150,54 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.zb11_assignment.bookmark.dao" />
       <option name="MAIN_CLASS_NAME" value="com.example.zb11_assignment.bookmark.dao.BookMarkGroupDAOTest" />
+      <option name="METHOD_NAME" value="selectAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookMarkItemDAOTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ZB11_assignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.zb11_assignment.bookmark.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.zb11_assignment.bookmark.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.example.zb11_assignment.bookmark.dao.BookMarkItemDAOTest" />
+      <option name="METHOD_NAME" value="delete" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookMarkItemDAOTest.insert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ZB11_assignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.zb11_assignment.bookmark.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.zb11_assignment.bookmark.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.example.zb11_assignment.bookmark.dao.BookMarkItemDAOTest" />
+      <option name="METHOD_NAME" value="insert" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookMarkItemDAOTest.selectAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ZB11_assignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.zb11_assignment.bookmark.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.zb11_assignment.bookmark.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.example.zb11_assignment.bookmark.dao.BookMarkItemDAOTest" />
       <option name="METHOD_NAME" value="selectAll" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -275,9 +293,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.BookMarkGroupDAOTest.delete" />
-        <item itemvalue="JUnit.BookMarkDAOTest.selectAll" />
-        <item itemvalue="JUnit.BookMarkDAOTest.delete" />
-        <item itemvalue="JUnit.BookMarkDAOTest.insert" />
+        <item itemvalue="JUnit.BookMarkItemDAOTest.selectAll" />
+        <item itemvalue="JUnit.BookMarkItemDAOTest.delete" />
+        <item itemvalue="JUnit.BookMarkItemDAOTest.insert" />
         <item itemvalue="JUnit.BookMarkGroupDAOTest.selectAll" />
       </list>
     </recent_temporary>
@@ -306,7 +324,8 @@
       <workItem from="1682082718128" duration="37000" />
       <workItem from="1682231045479" duration="4794000" />
       <workItem from="1682308396393" duration="25929000" />
-      <workItem from="1682398171176" duration="19054000" />
+      <workItem from="1682398171176" duration="19107000" />
+      <workItem from="1682470385714" duration="24252000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <created>1681310618038</created>
@@ -343,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682337408183</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add bookmark dao, dto, vo">
+      <created>1682424470955</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682424470955</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,6 +392,7 @@
     <MESSAGE value="add function&#10;- get 20 items of WIFI data order by distance&#10;- add new model of history table&#10;- enhance of sql connection and send query" />
     <MESSAGE value="add history function&#10;- add CRUD function in history table" />
     <MESSAGE value="refactoring project&#10;- reimplement project with MVC model rule" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring project&#10;- reimplement project with MVC model rule" />
+    <MESSAGE value="add bookmark dao, dto, vo" />
+    <option name="LAST_COMMIT_MESSAGE" value="add bookmark dao, dto, vo" />
   </component>
 </project>

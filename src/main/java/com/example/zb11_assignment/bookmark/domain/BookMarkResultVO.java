@@ -12,5 +12,4 @@ public class BookMarkResultVO {
     private String bookmarkName;
     private String wifiName;
     private String registrationDate;
-    private String manageNo;
 }

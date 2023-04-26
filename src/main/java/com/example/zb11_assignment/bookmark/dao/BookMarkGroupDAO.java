@@ -124,4 +124,37 @@ public enum BookMarkGroupDAO {
 
         return result;
     }
+
+    public BookMarkGroupVO select(int id){
+        BookMarkGroupVO result = null;
+        Connection conn = JDBCConnector.getConnection();
+        PreparedStatement preparedStatement = null;
+        ResultSet rs = null;
+
+        try{
+            String sql = "select * from bookmark_group where BOOKMARK_GROUP_ID = ?";
+            preparedStatement = conn.prepareStatement(sql);
+            preparedStatement.setInt(1, id);
+
+            rs = preparedStatement.executeQuery();
+
+            while(rs.next()){
+                result = BookMarkGroupVO.builder()
+                        .ID(rs.getInt("BOOKMARK_GROUP_ID"))
+                        .seqNo(rs.getInt("SEQ_NUM"))
+                        .registrationDate(rs.getString("REGIST_DATE"))
+                        .modifyDate(rs.getString("MODIFY_DATE"))
+                        .groupName(rs.getString("BOOKMARK_NAME"))
+                        .build();
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            JDBCConnector.close(conn);
+            JDBCConnector.close(preparedStatement);
+            JDBCConnector.close(rs);
+        }
+
+        return result;
+    }
 }

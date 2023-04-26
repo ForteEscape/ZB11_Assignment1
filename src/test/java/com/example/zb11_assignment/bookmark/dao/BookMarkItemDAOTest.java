@@ -5,13 +5,12 @@ import com.example.zb11_assignment.bookmark.dto.BookMarkDTO;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.StringTokenizer;
 
-class BookMarkDAOTest {
+class BookMarkItemDAOTest {
 
     @Test
     void insert() {
@@ -25,24 +24,23 @@ class BookMarkDAOTest {
                 .bookmarkGroupId(5)
                 .wifiName("Made in Uze")
                 .registrationDate(date)
-                .manageNumber("MG0006")
                 .build();
 
-        int result = BookMarkDAO.INSTANCE.insert(bookMarkDTO);
+        int result = BookMarkItemDAO.INSTANCE.insert(bookMarkDTO);
 
         Assertions.assertEquals(1, result);
     }
 
     @Test
     void delete() {
-        int result = BookMarkDAO.INSTANCE.delete(2);
+        int result = BookMarkItemDAO.INSTANCE.delete(2);
 
         Assertions.assertEquals(1, result);
     }
 
     @Test
     void selectAll() {
-        List<BookMarkResultVO> result = BookMarkDAO.INSTANCE.selectAll();
+        List<BookMarkResultVO> result = BookMarkItemDAO.INSTANCE.selectAll();
 
         Assertions.assertNotNull(result);
 

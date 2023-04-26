@@ -33,6 +33,10 @@
             background-color: #f2f2f2;
         }
 
+        tr:hover{
+            background-color: lightslategray;
+        }
+
         th{
             height: 50px;
             color: white;
@@ -50,7 +54,7 @@
     <a href="/index.jsp">홈</a> |
     <a href="/history/show">위치 히스토리 목록</a> |
     <a href="/wifi/getData">Open API 와이파이 정보 가져오기</a> |
-    <a href="/bookmark/show">북마크 보기</a> |
+    <a href="/bookmark/items/show">북마크 보기</a> |
     <a href="/bookmark/group/show">북마크 그룹 관리</a>
     <br>
     <br>

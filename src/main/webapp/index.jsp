@@ -22,6 +22,18 @@
     function getLocation(){
         navigator.geolocation.getCurrentPosition(success, error);
     }
+
+    function verify(){
+        var lat = document.getElementById("LAT").value;
+        var lnt = document.getElementById("LNT").value;
+
+        if (lat === "" || lat === null || lnt === "" || lnt === null){
+            alert("잘못된 위치 입력입니다. 다시 입력해주세요");
+            return;
+        }
+
+        document.getElementById("locationForm").submit();
+    }
 </script >
 
 <style>
@@ -43,6 +55,10 @@
         background-color: #f2f2f2;
     }
 
+    tr:hover{
+        background-color: lightslategray;
+    }
+
     th{
         height: 50px;
         color: white;
@@ -55,17 +71,17 @@
 <a href="/index.jsp">홈</a> |
 <a href="/history/show">위치 히스토리 목록</a> |
 <a href="/wifi/getData">Open API 와이파이 정보 가져오기</a> |
-<a href="/bookmark/show">북마크 보기</a> |
+<a href="/bookmark/items/show">북마크 보기</a> |
 <a href="/bookmark/group/show">북마크 그룹 관리</a>
 
 <br>
 <br>
 
-<form method="post" action="/wifi/calcLocation">
+<form method="post" action="/wifi/calcLocation" id="locationForm">
     LAT: <input type="text" name="LAT" placeholder="0.0" id="LAT"/>
     , LNT : <input type="text" name="LNT" placeholder="0.0" id="LNT"/>
     <button type="button" onclick="getLocation()">내 위치 가져오기</button>
-    <button type="submit"> 근처 WIFI 정보 보기</button>
+    <button type="button" onclick="verify()"> 근처 WIFI 정보 보기</button>
 </form>
 
 <br>

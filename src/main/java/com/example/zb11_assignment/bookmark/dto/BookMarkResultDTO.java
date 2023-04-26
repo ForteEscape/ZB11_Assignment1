@@ -7,9 +7,9 @@ import lombok.Setter;
 @Builder
 @Getter
 @Setter
-public class BookMarkDTO {
+public class BookMarkResultDTO {
     private int ID;
-    private int bookmarkGroupId;
+    private String bookmarkName;
     private String wifiName;
     private String registrationDate;
 }
