@@ -121,6 +121,33 @@ public enum WifiDAO {
         return resultList;
     }
 
+    public int getRows(){
+        int result = 0;
+
+        Connection conn = JDBCConnector.getConnection();
+        PreparedStatement preparedStatement = null;
+        ResultSet rs = null;
+
+        try {
+            String sql = "select count(*) from wifi_detail";
+            preparedStatement = conn.prepareStatement(sql);
+
+            rs = preparedStatement.executeQuery();
+
+            while(rs.next()){
+                result = rs.getInt(1);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            JDBCConnector.close(conn);
+            JDBCConnector.close(preparedStatement);
+            JDBCConnector.close(rs);
+        }
+
+        return result;
+    }
+
     public WifiVO selectOneByMGN(String manageNo){
         WifiVO result = null;
 

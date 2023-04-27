@@ -12,4 +12,5 @@ public class BookMarkDTO {
     private int bookmarkGroupId;
     private String wifiName;
     private String registrationDate;
+    private String manageNo;
 }

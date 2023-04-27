@@ -19,7 +19,7 @@ public class BookMarkGroupShowController extends HttpServlet {
         List<BookMarkGroupDTO> result = BookMarkGroupService.INSTANCE.getBookMarkGroup();
 
         req.setAttribute("bookMarkGroup", result);
-        req.getRequestDispatcher("/bookmark/group/group-show.jsp").forward(req, resp);
+        req.getRequestDispatcher("/templates/bookmark/group/group-show.jsp").forward(req, resp);
     }
 
     @Override
@@ -27,6 +27,6 @@ public class BookMarkGroupShowController extends HttpServlet {
         List<BookMarkGroupDTO> result = BookMarkGroupService.INSTANCE.getBookMarkGroup();
 
         req.setAttribute("bookMarkGroup", result);
-        req.getRequestDispatcher("/bookmark/group/group-show.jsp").forward(req, resp);
+        req.getRequestDispatcher("/templates/bookmark/group/group-show.jsp").forward(req, resp);
     }
 }

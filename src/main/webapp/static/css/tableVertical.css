@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border:  1px solid #f2f2f2;
+}
+
+td{
+    border: 1px solid #f2f2f2;
+    height: 50px;
+}
+
+.legend{
+    color: white;
+    background-color: #04AA6D;
+    text-align: center;
+}
+
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+tr:hover{
+    background-color: silver;
+}
+
+.option{
+    background-color: darkgreen;
+    color: white;
+}
+
+th{
+    height: 50px;
+    color: white;
+    background-color: #04AA6D;
+    border: 1px solid #f2f2f2;
+}

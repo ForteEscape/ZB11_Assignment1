@@ -10,44 +10,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>와이파이 정보 구하기</title>
 
-    <script>
-        function del(idx){
-            location.href="/history/delete?idx=" + idx;
-        }
-    </script>
-
-    <style>
-        table{
-            width: 100%;
-            border-collapse: collapse;
-            border:  1px solid #f2f2f2;
-        }
-
-        td{
-            border: 1px solid #f2f2f2;
-        }
-
-        tr:nth-child(even){
-            background-color: #f2f2f2;
-        }
-
-        tr:hover{
-            background-color: lightslategray;
-        }
-
-        th{
-            height: 50px;
-            color: white;
-            background-color: #04AA6D;
-            border: 1px solid #f2f2f2;
-        }
-
-        .btn{
-            text-align: center;
-        }
-    </style>
+    <link href="http://localhost:8080/static/css/tableHorizontal.css" rel="stylesheet" type="text/css">
+    <script defer src="http://localhost:8080/static/js/history.js" type="text/javascript"></script>
 </head>
 <body>
     <h1>위치 히스토리 목록</h1>
@@ -79,7 +45,7 @@
                         <td> <%= element.getLat() %></td>
                         <td> <%= element.getLnt() %></td>
                         <td> <%= element.getDate() %></td>
-                        <td class="btn"><input type="button" value="삭제" onclick="del('<%=element.getUid()%>');" ></td>
+                        <td class="notice"><input type="button" value="삭제" onclick="del('<%=element.getUid()%>');" ></td>
                     </tr>
                 <%}
             }%>

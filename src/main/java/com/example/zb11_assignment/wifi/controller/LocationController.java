@@ -35,6 +35,6 @@ public class LocationController extends HttpServlet {
         HistoryService.INSTANCE.addRecord(lnt, lat);
 
         req.setAttribute("result", result);
-        req.getRequestDispatcher("../index.jsp").forward(req, resp);
+        req.getRequestDispatcher("/index.jsp").forward(req, resp);
     }
 }

@@ -20,11 +20,13 @@ public enum BookMarkItemDAO {
         PreparedStatement preparedStatement = null;
 
         try{
-            String sql = "insert into bookmark_detail (BOOKMARK_GROUP_ID, WIFI_NAME, REGIST_DATE) values (?, ?, ?)";
+            String sql = "insert into bookmark_detail (BOOKMARK_GROUP_ID, WIFI_NAME, REGIST_DATE, MNG_NO) " +
+                    "values (?, ?, ?, ?)";
             preparedStatement = conn.prepareStatement(sql);
             preparedStatement.setInt(1, bookMarkDTO.getBookmarkGroupId());
             preparedStatement.setString(2, bookMarkDTO.getWifiName());
             preparedStatement.setString(3, bookMarkDTO.getRegistrationDate());
+            preparedStatement.setString(4, bookMarkDTO.getManageNo());
 
             result = preparedStatement.executeUpdate();
         } catch (SQLException e) {
@@ -67,8 +69,8 @@ public enum BookMarkItemDAO {
         ResultSet rs = null;
 
         try{
-            String sql = "select B.ID, BG.BOOKMARK_NAME, B.WIFI_NAME, B.REGIST_DATE from bookmark_detail B " +
-                    "inner join bookmark_group BG on B.BOOKMARK_GROUP_ID = BG.BOOKMARK_GROUP_ID";
+            String sql = "select B.ID, BG.BOOKMARK_NAME, B.WIFI_NAME, B.REGIST_DATE, B.MNG_NO from bookmark_detail B " +
+                    "inner join bookmark_group BG on B.BOOKMARK_GROUP_ID = BG.BOOKMARK_GROUP_ID ORDER BY B.ID ASC";
             preparedStatement = conn.prepareStatement(sql);
 
             rs = preparedStatement.executeQuery();
@@ -118,6 +120,37 @@ public enum BookMarkItemDAO {
                         .wifiName(rs.getString("WIFI_NAME"))
                         .registrationDate(rs.getString("REGIST_DATE"))
                         .build();
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            JDBCConnector.close(conn);
+            JDBCConnector.close(preparedStatement);
+            JDBCConnector.close(rs);
+        }
+
+        return result;
+    }
+
+    public int checkData(BookMarkDTO bookMarkDTO){
+        int result = 0;
+
+        Connection conn = JDBCConnector.getConnection();
+        PreparedStatement preparedStatement = null;
+        ResultSet rs = null;
+
+        try{
+            String sql = "select count(*) from bookmark_detail where BOOKMARK_GROUP_ID=? and MNG_NO=?";
+            preparedStatement = conn.prepareStatement(sql);
+
+            preparedStatement.setInt(1, bookMarkDTO.getBookmarkGroupId());
+            preparedStatement.setString(2, bookMarkDTO.getManageNo());
+
+            rs = preparedStatement.executeQuery();
+
+            while(rs.next()){
+                result = rs.getInt(1);
+                System.out.println(result);
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

@@ -70,6 +70,12 @@ public enum WifiService {
         return totalCnt;
     }
 
+    public int chkDataExistence(){
+        int result = WifiDAO.INSTANCE.getRows();
+
+        return result;
+    }
+
     public WifiDTO getWifiData(String manageNo){
         WifiDTO result;
         WifiVO wifiVO = WifiDAO.INSTANCE.selectOneByMGN(manageNo);

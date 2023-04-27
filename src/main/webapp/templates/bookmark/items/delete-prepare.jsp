@@ -8,48 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>와이파이 정보 구하기</title>
 
-  <style>
-    table{
-      width: 100%;
-      border-collapse: collapse;
-      border:  1px solid #f2f2f2;
-    }
-
-    td{
-      border: 1px solid #f2f2f2;
-      height: 50px;
-    }
-
-    .legend{
-      color: white;
-      background-color: #04AA6D;
-      text-align: center;
-    }
-
-    tr:nth-child(even){
-      background-color: #f2f2f2;
-    }
-
-    tr:hover{
-      background-color: lightslategray;
-    }
-
-    th{
-      height: 50px;
-      color: white;
-      background-color: #04AA6D;
-      border: 1px solid #f2f2f2;
-    }
-  </style>
-
-  <script>
-    function del(idx){
-      alert("북마크 정보를 삭제하였습니다.");
-      location.href="/bookmark/items/delete?id=" + idx;
-    }
-  </script>
+  <link href="http://localhost:8080/static/css/tableVertical.css" rel="stylesheet" type="text/css">
+  <script defer src="http://localhost:8080/static/js/items_delete-prepare.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -64,25 +26,22 @@
 
 <p>북마크를 삭제하시겠습니까?</p>
 
-<br>
-<br>
-
 <% BookMarkResultDTO result = (BookMarkResultDTO) request.getAttribute("itemData"); %>
 
 <table>
   <tr>
     <td class="legend">북마크 이름</td>
-    <td><input type="text" value="<%=result.getBookmarkName()%>"/></td>
+    <td><%=result.getBookmarkName()%></td>
   </tr>
 
   <tr>
     <td class="legend">와이파이명</td>
-    <td><input type="text" value="<%=result.getWifiName()%>"/></td>
+    <td><%=result.getWifiName()%></td>
   </tr>
 
   <tr>
     <td class="legend">등록일자</td>
-    <td><input type="text" value="<%=result.getRegistrationDate()%>"/></td>
+    <td><%=result.getRegistrationDate()%></td>
   </tr>
 
   <tr>

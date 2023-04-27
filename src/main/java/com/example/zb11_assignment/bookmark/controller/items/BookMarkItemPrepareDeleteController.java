@@ -19,6 +19,6 @@ public class BookMarkItemPrepareDeleteController extends HttpServlet {
         BookMarkResultDTO result = BookMarkItemService.INSTANCE.getItem(Integer.parseInt(bookMarkId));
 
         req.setAttribute("itemData", result);
-        req.getRequestDispatcher("/bookmark/items/delete-prepare.jsp").forward(req, resp);
+        req.getRequestDispatcher("/templates/bookmark/items/delete-prepare.jsp").forward(req, resp);
     }
 }

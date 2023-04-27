@@ -18,13 +18,13 @@ public class BookMarkItemShowController extends HttpServlet {
         List<BookMarkResultDTO> result = BookMarkItemService.INSTANCE.getItemList();
 
         req.setAttribute("itemData", result);
-        req.getRequestDispatcher("/bookmark/items/show-items.jsp").forward(req, resp);
+        req.getRequestDispatcher("/templates/bookmark/items/show-items.jsp").forward(req, resp);
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<BookMarkResultDTO> result = BookMarkItemService.INSTANCE.getItemList();
 
         req.setAttribute("itemData", result);
-        req.getRequestDispatcher("/bookmark/items/show-items.jsp").forward(req, resp);
+        req.getRequestDispatcher("/templates/bookmark/items/show-items.jsp").forward(req, resp);
     }
 }

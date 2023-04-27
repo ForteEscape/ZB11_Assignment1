@@ -2,70 +2,15 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="com.example.zb11_assignment.wifi.externals.WifiTotalData" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ taglib prefix="c" uri ="http://java.sun.com/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>와이파이 정보 구하기</title>
+
+    <link href="http://localhost:8080/static/css/tableHorizontal.css" rel="stylesheet" type="text/css">
+    <script defer src="http://localhost:8080/static/js/index.js" type="text/javascript"></script>
 </head>
 <body>
-<script>
-    function success(position){
-        document.getElementById("LNT").value = position.coords.longitude;
-        document.getElementById("LAT").value = position.coords.latitude;
-    }
-
-    function error(){
-        console.log("error detected");
-    }
-
-    function getLocation(){
-        navigator.geolocation.getCurrentPosition(success, error);
-    }
-
-    function verify(){
-        var lat = document.getElementById("LAT").value;
-        var lnt = document.getElementById("LNT").value;
-
-        if (lat === "" || lat === null || lnt === "" || lnt === null){
-            alert("잘못된 위치 입력입니다. 다시 입력해주세요");
-            return;
-        }
-
-        document.getElementById("locationForm").submit();
-    }
-</script >
-
-<style>
-    table{
-        width: 100%;
-        border-collapse: collapse;
-        border:  1px solid #f2f2f2;
-    }
-
-    .notice{
-        text-align: center;
-    }
-
-    td{
-        border: 1px solid #f2f2f2;
-    }
-
-    tr:nth-child(even){
-        background-color: #f2f2f2;
-    }
-
-    tr:hover{
-        background-color: lightslategray;
-    }
-
-    th{
-        height: 50px;
-        color: white;
-        background-color: #04AA6D;
-        border: 1px solid #f2f2f2;
-    }
-</style>
 
 <h1><%= "와이파이 정보 구하기" %></h1>
 <a href="/index.jsp">홈</a> |

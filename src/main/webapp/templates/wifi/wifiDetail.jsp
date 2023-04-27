@@ -11,57 +11,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
-
-    <style>
-        table{
-            width: 100%;
-            border-collapse: collapse;
-            border:  1px solid #f2f2f2;
-        }
-
-        td{
-            border: 1px solid #f2f2f2;
-            height: 50px;
-        }
-
-        .legend{
-            color: white;
-            background-color: #04AA6D;
-            text-align: center;
-        }
-
-        tr:nth-child(even){
-            background-color: #f2f2f2;
-        }
-
-        tr:hover{
-            background-color: lightslategray;
-        }
-
-        th{
-            height: 50px;
-            color: white;
-            background-color: #04AA6D;
-            border: 1px solid #f2f2f2;
-        }
-    </style>
-
-    <script>
-        function verify(){
-            var selectOption = document.getElementById("bookmark");
-            var selectOptionValue = selectOption.options[selectOption.selectedIndex].value;
-
-            if(selectOptionValue === "None"){
-                alert("북마크를 선택해야 추가할 수 있습니다.");
-                return;
-            }
-
-            alert("북마크 정보를 추가하였습니다.");
-
-            document.getElementById("bookmarkItemForm").submit();
-        }
-    </script>
+    <title>와이파이 정보 구하기</title>
+    <link href="http://localhost:8080/static/css/tableVertical.css" rel="stylesheet" type="text/css">
+    <script defer src="http://localhost:8080/static/js/wifiDetail.js" type="text/javascript"></script>
 </head>
 <body>
 <h1><%= "와이파이 정보 구하기" %></h1>
@@ -79,16 +31,16 @@
     double dist = Double.parseDouble((String)request.getAttribute("dist"));
 %>
 
-<!-- wifi detail controller 단에서 bookmark group데이터를 가져와야함 -->
 <form method="post" action="/bookmark/items/add" id="bookmarkItemForm">
     <select name="bookmark" id="bookmark">
-        <option value="None">북마크 그룹 이름 선택</option>
+        <option class="option" value="None">북마크 그룹 이름 선택</option>
         <% for(BookMarkGroupDTO element: bookMarkGroup){%>
-            <option value="<%=element.getID()%>"><%=element.getGroupName()%></option>
+            <option class="option" value="<%=element.getID()%>"><%=element.getGroupName()%></option>
         <%}%>
     </select>
 
     <input type="hidden" name="wifiName" value="<%=result.getWifiName()%>"/>
+    <input type="hidden" name="mngNo" value="<%=result.getManageNo()%>"/>
     <button type="button" onclick="verify()">북마크 추가하기</button>
 </form>
 

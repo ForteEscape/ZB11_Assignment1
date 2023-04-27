@@ -19,6 +19,6 @@ public class BookMarkGroupPrepareModifyController extends HttpServlet {
         BookMarkGroupDTO result = BookMarkGroupService.INSTANCE.getGroupInfo(Integer.parseInt(bookMarkGroupId));
 
         req.setAttribute("bookmarkInfo", result);
-        req.getRequestDispatcher("/bookmark/group/modify-prepare.jsp").forward(req, resp);
+        req.getRequestDispatcher("/templates/bookmark/group/modify-prepare.jsp").forward(req, resp);
     }
 }

@@ -18,6 +18,6 @@ public class HistoryShowController extends HttpServlet {
         List<HistoryDTO> result = HistoryService.INSTANCE.getHistory();
 
         req.setAttribute("result", result);
-        req.getRequestDispatcher("/history/history.jsp").forward(req, resp);
+        req.getRequestDispatcher("/templates/history/history.jsp").forward(req, resp);
     }
 }

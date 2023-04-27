@@ -26,6 +26,6 @@ public class WifiDetailController extends HttpServlet {
         req.setAttribute("result", result);
         req.setAttribute("dist", dist);
         req.setAttribute("bookMarkGroup", bookMarkGroup);
-        req.getRequestDispatcher("/wifi/wifiDetail.jsp").forward(req, resp);
+        req.getRequestDispatcher("/templates/wifi/wifiDetail.jsp").forward(req, resp);
     }
 }

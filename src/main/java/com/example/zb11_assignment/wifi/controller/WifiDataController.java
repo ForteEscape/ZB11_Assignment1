@@ -13,9 +13,13 @@ import java.io.IOException;
 public class WifiDataController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        int totalCnt = WifiService.INSTANCE.getDataFromAPI();
+        int currentRows = WifiService.INSTANCE.chkDataExistence();
 
-        req.setAttribute("totalCnt", totalCnt);
-        req.getRequestDispatcher("/wifi/getWifiData.jsp").forward(req, resp);
+        if (currentRows == 0){
+            currentRows = WifiService.INSTANCE.getDataFromAPI();
+        }
+
+        req.setAttribute("totalCnt", currentRows);
+        req.getRequestDispatcher("/templates/wifi/getWifiData.jsp").forward(req, resp);
     }
 }

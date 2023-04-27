@@ -21,6 +21,6 @@ public class BookMarkGroupPrepareDeleteController extends HttpServlet {
 
         req.setAttribute("id", bookMarkGroupId);
         req.setAttribute("bookmarkInfo", result);
-        req.getRequestDispatcher("/bookmark/group/delete-prepare.jsp").forward(req, resp);
+        req.getRequestDispatcher("/templates/bookmark/group/delete-prepare.jsp").forward(req, resp);
     }
 }

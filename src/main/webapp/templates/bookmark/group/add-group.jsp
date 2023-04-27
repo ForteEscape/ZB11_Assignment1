@@ -8,55 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>와이파이 정보 구하기</title>
 
-  <style>
-    table{
-      width: 100%;
-      border-collapse: collapse;
-      border:  1px solid #f2f2f2;
-    }
-
-    td{
-      border: 1px solid #f2f2f2;
-      height: 50px;
-    }
-
-    .legend{
-      color: white;
-      background-color: #04AA6D;
-      text-align: center;
-    }
-
-    tr:nth-child(even){
-      background-color: #f2f2f2;
-    }
-
-    tr:hover{
-      background-color: lightslategray;
-    }
-
-    th{
-      height: 50px;
-      color: white;
-      background-color: #04AA6D;
-      border: 1px solid #f2f2f2;
-    }
-  </style>
-
-  <script>
-    function verify(){
-      var bookmarkName = document.getElementById("bookmarkName").value;
-      var seqNo = document.getElementById("seqNo").value;
-
-      if (bookmarkName === "" || bookmarkName === null || seqNo === "" || seqNo === null){
-        alert("잘못된 형식입니다. 다시 입력해주세요");
-        return;
-      }
-
-      document.getElementById("groupDeleteForm").submit();
-    }
-  </script>
+  <link href="http://localhost:8080/static/css/tableVertical.css" rel="stylesheet" type="text/css">
+  <script defer src="http://localhost:8080/static/js/add-group.js" type="text/javascript"></script>
 </head>
 <body>
 

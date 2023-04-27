@@ -11,38 +11,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
-
-    <style>
-        table{
-            width: 100%;
-            border-collapse: collapse;
-            border:  1px solid #f2f2f2;
-        }
-
-        .notice{
-            text-align: center;
-        }
-
-        td{
-            border: 1px solid #f2f2f2;
-        }
-
-        tr:nth-child(even){
-            background-color: #f2f2f2;
-        }
-
-        tr:hover{
-            background-color: lightslategray;
-        }
-
-        th{
-            height: 50px;
-            color: white;
-            background-color: #04AA6D;
-            border: 1px solid #f2f2f2;
-        }
-    </style>
+    <title>와이파이 정보 구하기</title>
+    <link href="http://localhost:8080/static/css/tableHorizontal.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>

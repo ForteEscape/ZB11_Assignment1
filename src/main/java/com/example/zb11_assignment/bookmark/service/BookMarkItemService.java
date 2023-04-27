@@ -2,6 +2,7 @@ package com.example.zb11_assignment.bookmark.service;
 
 import com.example.zb11_assignment.bookmark.dao.BookMarkItemDAO;
 import com.example.zb11_assignment.bookmark.domain.BookMarkResultVO;
+import com.example.zb11_assignment.bookmark.dto.BookMarkDTO;
 import com.example.zb11_assignment.bookmark.dto.BookMarkResultDTO;
 
 import java.util.ArrayList;
@@ -39,6 +40,16 @@ public enum BookMarkItemService {
                 .build();
 
         return result;
+    }
+
+    public boolean checkExists(BookMarkDTO element){
+        int result = BookMarkItemDAO.INSTANCE.checkData(element);
+
+        return result != 0;
+    }
+
+    public int addBookMark(BookMarkDTO element){
+        return BookMarkItemDAO.INSTANCE.insert(element);
     }
 
     public int deleteItem(int id){
