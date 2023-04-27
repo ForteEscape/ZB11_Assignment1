@@ -152,7 +152,6 @@ public enum BookMarkItemDAO {
 
             while(rs.next()){
                 result = rs.getInt(1);
-                System.out.println(result);
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
