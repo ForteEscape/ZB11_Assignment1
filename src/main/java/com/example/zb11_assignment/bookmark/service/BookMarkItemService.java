@@ -21,6 +21,7 @@ public enum BookMarkItemService {
                     .bookmarkName(element.getBookmarkName())
                     .wifiName(element.getWifiName())
                     .registrationDate(element.getRegistrationDate())
+                    .manageNo(element.getManageNo())
                     .build();
 
             result.add(bookMarkResultDTO);
@@ -37,6 +38,7 @@ public enum BookMarkItemService {
                 .bookmarkName(data.getBookmarkName())
                 .registrationDate(data.getRegistrationDate())
                 .wifiName(data.getWifiName())
+                .manageNo(data.getManageNo())
                 .build();
 
         return result;

@@ -4,16 +4,20 @@ import com.example.zb11_assignment.history.dao.HistoryDAO;
 import com.example.zb11_assignment.history.domain.HistoryVO;
 import com.example.zb11_assignment.history.dto.HistoryDTO;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
+import java.sql.Timestamp;
 
 public enum HistoryService {
     INSTANCE;
 
     public void addRecord(double lnt, double lat){
-        java.sql.Timestamp dateTime = java.sql.Timestamp.valueOf(java.time.LocalDateTime.now());
-        StringTokenizer st = new StringTokenizer(dateTime.toString());
+        Timestamp dateTime = Timestamp.valueOf(java.time.LocalDateTime.now());
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+
+        StringTokenizer st = new StringTokenizer(sdf.format(dateTime));
         String date = st.nextToken() + "T" + st.nextToken();
 
         HistoryDTO historyDTO = HistoryDTO.builder()

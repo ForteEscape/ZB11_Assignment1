@@ -16,6 +16,6 @@ public class BookMarkGroupDeleteController extends HttpServlet {
         String id = req.getParameter("id");
 
         BookMarkGroupService.INSTANCE.deleteGroupInfo(Integer.parseInt(id));
-        req.getRequestDispatcher("/bookmark/group/show").forward(req, resp);
+        req.getRequestDispatcher("/templates/bookmark/group/delete-group-success.jsp").forward(req, resp);
     }
 }

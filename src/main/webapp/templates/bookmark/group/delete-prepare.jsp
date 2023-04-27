@@ -25,6 +25,8 @@
 <br>
 <br>
 
+<p>북마크 그룹 이름을 삭제하시겠습니까?</p>
+
 <table>
     <tr>
         <td class="legend">북마크 이름</td>

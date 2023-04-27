@@ -39,6 +39,6 @@ public class BookMarkGroupModifyController extends HttpServlet {
 
         BookMarkGroupService.INSTANCE.updateGroupInfo(bookMarkGroupDTO);
 
-        req.getRequestDispatcher("/bookmark/group/show").forward(req, resp);
+        req.getRequestDispatcher("/templates/bookmark/group/modify-group-success.jsp").forward(req, resp);
     }
 }

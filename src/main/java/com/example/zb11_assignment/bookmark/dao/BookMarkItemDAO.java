@@ -81,6 +81,7 @@ public enum BookMarkItemDAO {
                         .bookmarkName(rs.getString("BOOKMARK_NAME"))
                         .wifiName(rs.getString("WIFI_NAME"))
                         .registrationDate(rs.getString("REGIST_DATE"))
+                        .manageNo(rs.getString("MNG_NO"))
                         .build();
 
                 result.add(bookMarkResultVO);
@@ -105,7 +106,7 @@ public enum BookMarkItemDAO {
         ResultSet rs = null;
 
         try{
-            String sql = "select B.ID, BG.BOOKMARK_NAME, B.WIFI_NAME, B.REGIST_DATE from bookmark_detail B " +
+            String sql = "select B.ID, BG.BOOKMARK_NAME, B.WIFI_NAME, B.REGIST_DATE, B.MNG_NO from bookmark_detail B " +
                     "inner join bookmark_group BG on B.BOOKMARK_GROUP_ID = BG.BOOKMARK_GROUP_ID where B.ID=?";
 
             preparedStatement = conn.prepareStatement(sql);
@@ -119,6 +120,7 @@ public enum BookMarkItemDAO {
                         .bookmarkName(rs.getString("BOOKMARK_NAME"))
                         .wifiName(rs.getString("WIFI_NAME"))
                         .registrationDate(rs.getString("REGIST_DATE"))
+                        .manageNo(rs.getString("MNG_NO"))
                         .build();
             }
         } catch (SQLException e) {

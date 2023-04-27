@@ -6,7 +6,5 @@ function verify(){
         alert("잘못된 입력입니다. 다시 입력해주세요");
         return;
     }
-
-    alert("북마크 그룹 정보를 수정했습니다.");
     document.getElementById("modifyForm").submit();
 }

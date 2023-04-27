@@ -28,7 +28,7 @@
 <%
     WifiDTO result = (WifiDTO) request.getAttribute("result");
     List<BookMarkGroupDTO> bookMarkGroup = (ArrayList<BookMarkGroupDTO>) request.getAttribute("bookMarkGroup");
-    double dist = Double.parseDouble((String)request.getAttribute("dist"));
+    String dist = (String)request.getAttribute("dist");
 %>
 
 <form method="post" action="/bookmark/items/add" id="bookmarkItemForm">
@@ -62,7 +62,7 @@
 
     <tr>
         <td class="legend" id="wifiName">와이파이명</td>
-        <td><%=result.getWifiName()%></td>
+        <td><a href="#"><%=result.getWifiName()%></a></td>
     </tr>
 
     <tr>

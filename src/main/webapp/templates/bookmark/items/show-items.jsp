@@ -48,7 +48,7 @@
     <tr>
         <td><%=element.getID()%></td>
         <td><%=element.getBookmarkName()%></td>
-        <td><%=element.getWifiName()%></td>
+        <td><a href="/wifi/detail?manageNo=<%=element.getManageNo()%>"><%=element.getWifiName()%></a></td> <!-- 관리번호로는 찾을 수 있다. 거리는? -->
         <td><%=element.getRegistrationDate()%></td>
         <td>
             <a href="/bookmark/items/deletePrepare?id=<%=element.getID()%>">삭제</a>

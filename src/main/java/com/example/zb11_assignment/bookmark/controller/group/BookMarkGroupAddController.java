@@ -38,6 +38,6 @@ public class BookMarkGroupAddController extends HttpServlet {
 
         BookMarkGroupService.INSTANCE.addGroupInfo(bookMarkGroupDTO);
 
-        req.getRequestDispatcher("/bookmark/group/show").forward(req, resp);
+        req.getRequestDispatcher("/templates/bookmark/group/add-group-success.jsp").forward(req, resp);
     }
 }

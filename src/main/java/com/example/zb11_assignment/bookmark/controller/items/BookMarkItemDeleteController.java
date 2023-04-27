@@ -16,6 +16,6 @@ public class BookMarkItemDeleteController extends HttpServlet {
         String id = req.getParameter("id");
 
         BookMarkItemService.INSTANCE.deleteItem(Integer.parseInt(id));
-        req.getRequestDispatcher("/bookmark/items/show").forward(req, resp);
+        req.getRequestDispatcher("/templates/bookmark/items/delete-items-success.jsp").forward(req, resp);
     }
 }

@@ -23,6 +23,10 @@ public class WifiDetailController extends HttpServlet {
         List<BookMarkGroupDTO> bookMarkGroup = BookMarkGroupService.INSTANCE.getBookMarkGroup();
         WifiDTO result = WifiService.INSTANCE.getWifiData(manageNo);
 
+        if(dist == null || dist.equals("")){
+            dist = "0.0000";
+        }
+
         req.setAttribute("result", result);
         req.setAttribute("dist", dist);
         req.setAttribute("bookMarkGroup", bookMarkGroup);
