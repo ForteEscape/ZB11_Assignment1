@@ -42,8 +42,8 @@
                 for(HistoryDTO element: result){%>
                     <tr>
                         <td> <%= element.getUid() %></td>
-                        <td> <%= element.getLat() %></td>
                         <td> <%= element.getLnt() %></td>
+                        <td> <%= element.getLat() %></td>
                         <td> <%= element.getDate() %></td>
                         <td class="notice"><input type="button" value="삭제" onclick="del('<%=element.getUid()%>');" ></td>
                     </tr>

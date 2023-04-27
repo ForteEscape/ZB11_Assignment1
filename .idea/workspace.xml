@@ -9,30 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d53d8ada-b056-420e-b94b-3ce93a4550c0" name="Changes" comment="add new column in bookmark_detail table&#10;refactoring structure in /webapp directory - add templates, statics(css, js, etc...)&#10;add check existence function(DB data)">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/add-group-success.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/delete-group-success.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/delete-items-success.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/modify-group-success.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/bookmark/group/add-group-success.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/bookmark/group/delete-group-success.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/bookmark/group/modify-group-success.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/bookmark/items/delete-items-success.jsp" afterDir="false" />
+    <list default="true" id="d53d8ada-b056-420e-b94b-3ce93a4550c0" name="Changes" comment="각 자료 삽입 및 삭제, 수정 시 담당 페이지로 넘어간 뒤 show로 넘어가게 수정&#10;각 기능에 대한 테스트 수행">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/controller/group/BookMarkGroupAddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/controller/group/BookMarkGroupAddController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/controller/group/BookMarkGroupDeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/controller/group/BookMarkGroupDeleteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/controller/group/BookMarkGroupModifyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/controller/group/BookMarkGroupModifyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/controller/items/BookMarkItemDeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/controller/items/BookMarkItemDeleteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/dao/BookMarkItemDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/dao/BookMarkItemDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/service/BookMarkItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/bookmark/service/BookMarkItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/history/service/HistoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/history/service/HistoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/wifi/controller/WifiDetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/zb11_assignment/wifi/controller/WifiDetailController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/add-group.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/add-group.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/group_delete-prepare.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/group_delete-prepare.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/group_modify-prepare.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/group_modify-prepare.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/items_delete-prepare.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/items_delete-prepare.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/bookmark/group/delete-prepare.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/bookmark/group/delete-prepare.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/bookmark/items/show-items.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/bookmark/items/show-items.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/history/history.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/history/history.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/wifi/wifiDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/wifi/wifiDetail.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,30 +52,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "import_schema_mapping": "<schema-mapping>\n  <databases>\n    <list>\n      <schema-mapping-item>\n        <source-data-source-id>7c1fc121-d253-46d7-bba0-c1b11c2f46fd</source-data-source-id>\n        <source-path>schema/&quot;zb11_assignment1&quot;</source-path>\n        <target-data-source-id>7c1fc121-d253-46d7-bba0-c1b11c2f46fd</target-data-source-id>\n        <target-path>schema/&quot;zb11_assignment1&quot;</target-path>\n      </schema-mapping-item>\n    </list>\n  </databases>\n</schema-mapping>",
-    "last_opened_file_path": "C:/Users/sehunkim/Desktop/hello-spring/ZB11_assignment/src/main/webapp/static/js",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;import_schema_mapping&quot;: &quot;&lt;schema-mapping&gt;\n  &lt;databases&gt;\n    &lt;list&gt;\n      &lt;schema-mapping-item&gt;\n        &lt;source-data-source-id&gt;7c1fc121-d253-46d7-bba0-c1b11c2f46fd&lt;/source-data-source-id&gt;\n        &lt;source-path&gt;schema/&amp;quot;zb11_assignment1&amp;quot;&lt;/source-path&gt;\n        &lt;target-data-source-id&gt;7c1fc121-d253-46d7-bba0-c1b11c2f46fd&lt;/target-data-source-id&gt;\n        &lt;target-path&gt;schema/&amp;quot;zb11_assignment1&amp;quot;&lt;/target-path&gt;\n      &lt;/schema-mapping-item&gt;\n    &lt;/list&gt;\n  &lt;/databases&gt;\n&lt;/schema-mapping&gt;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sehunkim/Desktop/hello-spring/ZB11_assignment/src/main/webapp/static/js&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mariadb"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.example.zb11_assignment.bookmark.domain" />
@@ -328,7 +308,8 @@
       <workItem from="1682308396393" duration="25929000" />
       <workItem from="1682398171176" duration="19107000" />
       <workItem from="1682470385714" duration="27050000" />
-      <workItem from="1682576592991" duration="16015000" />
+      <workItem from="1682576592991" duration="16512000" />
+      <workItem from="1682598638627" duration="725000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <created>1681310618038</created>
@@ -386,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682588990380</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="각 자료 삽입 및 삭제, 수정 시 담당 페이지로 넘어간 뒤 show로 넘어가게 수정&#10;각 기능에 대한 테스트 수행">
+      <created>1682597948096</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1682597948096</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,6 +400,7 @@
     <MESSAGE value="add bookmark dao, dto, vo" />
     <MESSAGE value="add bookmark function&#10;add verify data function" />
     <MESSAGE value="add new column in bookmark_detail table&#10;refactoring structure in /webapp directory - add templates, statics(css, js, etc...)&#10;add check existence function(DB data)" />
-    <option name="LAST_COMMIT_MESSAGE" value="add new column in bookmark_detail table&#10;refactoring structure in /webapp directory - add templates, statics(css, js, etc...)&#10;add check existence function(DB data)" />
+    <MESSAGE value="각 자료 삽입 및 삭제, 수정 시 담당 페이지로 넘어간 뒤 show로 넘어가게 수정&#10;각 기능에 대한 테스트 수행" />
+    <option name="LAST_COMMIT_MESSAGE" value="각 자료 삽입 및 삭제, 수정 시 담당 페이지로 넘어간 뒤 show로 넘어가게 수정&#10;각 기능에 대한 테스트 수행" />
   </component>
 </project>

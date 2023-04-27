@@ -80,8 +80,8 @@
                 <td> <%= element.getWifiData().getInstalledYear()%></td>
                 <td> <%= element.getWifiData().getInoutDoor()%></td>
                 <td> <%= element.getWifiData().getConnectEnvironment()%></td>
-                <td> <%= element.getWifiData().getLnt()%></td>
                 <td> <%= element.getWifiData().getLat()%></td>
+                <td> <%= element.getWifiData().getLnt()%></td>
                 <td> <%= element.getWifiData().getWorkDateTime()%></td>
             </tr>
             <%}%>

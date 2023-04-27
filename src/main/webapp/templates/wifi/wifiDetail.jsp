@@ -116,12 +116,12 @@
     </tr>
 
     <tr>
-        <td class="legend" id="lat">X좌표</td>
+        <td class="legend" id="lnt">X좌표</td>
         <td><%=result.getLat()%></td>
     </tr>
 
     <tr>
-        <td class="legend" id="lnt">Y좌표</td>
+        <td class="legend" id="lat">Y좌표</td>
         <td><%=result.getLnt()%></td>
     </tr>
 
