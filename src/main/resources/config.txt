@@ -1,3 +1,0 @@
-jdbc:mariadb://localhost:3306/zb11_assignment1
-root
-kk2924140

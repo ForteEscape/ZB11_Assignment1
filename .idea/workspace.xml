@@ -9,9 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d53d8ada-b056-420e-b94b-3ce93a4550c0" name="Changes" comment="디버깅용 콘솔 출력문 삭제">
+    <list default="true" id="d53d8ada-b056-420e-b94b-3ce93a4550c0" name="Changes" comment="modify README.md">
+      <change afterPath="$PROJECT_DIR$/sql/DDL.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +59,7 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;import_schema_mapping&quot;: &quot;&lt;schema-mapping&gt;\n  &lt;databases&gt;\n    &lt;list&gt;\n      &lt;schema-mapping-item&gt;\n        &lt;source-data-source-id&gt;7c1fc121-d253-46d7-bba0-c1b11c2f46fd&lt;/source-data-source-id&gt;\n        &lt;source-path&gt;schema/&amp;quot;zb11_assignment1&amp;quot;&lt;/source-path&gt;\n        &lt;target-data-source-id&gt;7c1fc121-d253-46d7-bba0-c1b11c2f46fd&lt;/target-data-source-id&gt;\n        &lt;target-path&gt;schema/&amp;quot;zb11_assignment1&amp;quot;&lt;/target-path&gt;\n      &lt;/schema-mapping-item&gt;\n    &lt;/list&gt;\n  &lt;/databases&gt;\n&lt;/schema-mapping&gt;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sehunkim/Desktop/hello-spring/ZB11_assignment/src/main/webapp/static/js&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sehunkim/Desktop/hello-spring/hello-spring&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -307,7 +308,11 @@
       <workItem from="1682398171176" duration="19107000" />
       <workItem from="1682470385714" duration="27050000" />
       <workItem from="1682576592991" duration="16512000" />
-      <workItem from="1682598638627" duration="3370000" />
+      <workItem from="1682598638627" duration="4101000" />
+      <workItem from="1682651961635" duration="12000" />
+      <workItem from="1682661011846" duration="33000" />
+      <workItem from="1682661275927" duration="336000" />
+      <workItem from="1683179193145" duration="148000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <created>1681310618038</created>
@@ -386,7 +391,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682599923088</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="modify README.md">
+      <created>1682602023378</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1682602023378</updated>
+    </task>
+    <task id="LOCAL-00013" summary="modify README.md">
+      <created>1682602098156</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1682602098156</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,6 +434,7 @@
     <MESSAGE value="각 자료 삽입 및 삭제, 수정 시 담당 페이지로 넘어간 뒤 show로 넘어가게 수정&#10;각 기능에 대한 테스트 수행" />
     <MESSAGE value="위, 경도 데이터 관련 수정" />
     <MESSAGE value="디버깅용 콘솔 출력문 삭제" />
-    <option name="LAST_COMMIT_MESSAGE" value="디버깅용 콘솔 출력문 삭제" />
+    <MESSAGE value="modify README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify README.md" />
   </component>
 </project>
